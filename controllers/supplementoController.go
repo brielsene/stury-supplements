@@ -19,6 +19,12 @@ func RegistraSuplementos(c *gin.Context) {
 	c.JSON(http.StatusCreated, &suplementos)
 }
 
+func RetornaTodosSuplementos(c *gin.Context) {
+	var suplementos []models.Suplementos
+	database.DB.Find(&suplementos)
+	c.JSON(http.StatusOK, &suplementos)
+}
+
 func Login(c *gin.Context) {
 	fmt.Println("Entrei no login")
 	var user models.User

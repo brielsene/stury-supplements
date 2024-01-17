@@ -23,6 +23,7 @@ func HandleRequests() {
 	r.Use(controllers.AuthMiddleware())
 	{
 		r.POST("/new", controllers.RegistraSuplementos)
+		r.GET("/all", controllers.RetornaTodosSuplementos)
 	}
 
 	// Rota de login (sem autenticação)
