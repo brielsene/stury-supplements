@@ -15,8 +15,7 @@ var (
 func ConectaComDB() {
 	stringConnection := "host=localhost user=root password=root dbname=root port=5432 sslmode=disable"
 	DB, err = gorm.Open(postgres.Open(stringConnection))
-	var suplementos models.Suplementos
 	var user models.User
-	DB.AutoMigrate(&suplementos, &user)
+	DB.AutoMigrate(&user)
 
 }

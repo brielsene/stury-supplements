@@ -3,7 +3,7 @@ version: '3.8'
 services:
   postgres:
     image: postgres:latest
-    container_name: postgres-container-will
+    container_name: postgres-container-stury
     environment:
       POSTGRES_DB: root
       POSTGRES_USER: root
@@ -15,7 +15,7 @@ services:
 
   pgadmin:
     image: dpage/pgadmin4:latest
-    container_name: pgadmin-container-will
+    container_name: pgadmin-container-stury
     environment:
       PGADMIN_DEFAULT_EMAIL: gb@gmail.com
       PGADMIN_DEFAULT_PASSWORD: 123
